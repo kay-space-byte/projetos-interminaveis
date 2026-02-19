@@ -24,6 +24,10 @@
 
 <body>
 
+<video id="bg-video" autoplay muted loop playsinline>
+  <source src="feixes.mp4" type="video/mp4">
+</video>
+
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
   <div class="container">
     <!-- Logo -->
@@ -70,18 +74,18 @@
           <img src="sua-foto.jpg" alt="Gustavo Reis Ferreira" class="rounded-circle mb-3" style="width: 220px; height: 220px; object-fit: cover; border: 4px solid #c8a164;">
         </div>
 
-        <h5 class="mb-3 border-bottom pb-2" style="border-color: #c8a164 !important;">Contato</h5>
+        <h5 class="mb-3 border-bottom pb-2" style="border-color: #c8a164 !important;"><strong>CONTATO</strong></h5>
         <ul class="list-unstyled">
           <li>📧 gustavomuttle@gmail.com</li>
           <li>📞 (61) 9 9114-7708</li>
           <li>📍 Ceilândia, DF - 72110-115</li>
         </ul>
 
-        <h5 class="mt-4 mb-3 border-bottom pb-2" style="border-color: #c8a164 !important;">Formação</h5>
+        <h5 class="mt-4 mb-3 border-bottom pb-2" style="border-color: #c8a164 !important;"><strong>FORMAÇÃO</strong></h5>
         <p><strong>Análise e Desenvolvimento de Software - TI</strong><br>Anhanguera, Taguatinga, DF<br>Esperado: Dez/2026</p>
         <p><strong>Programação (Php, JavaScript, Banco de Dados)</strong><br>Alura, São Paulo, SP<br>Esperado: Out/2026</p>
 
-        <h5 class="mt-4 mb-3 border-bottom pb-2" style="border-color: #c8a164 !important;">Idiomas</h5>
+        <h5 class="mt-4 mb-3 border-bottom pb-2" style="border-color: #c8a164 !important;"><strong>IDIOMAS</strong></h5>
         <p>Inglês – B2 (Intermediário)</p>
       </div>
     </div>
@@ -101,11 +105,11 @@
         Desenvolvedor em Formação | Designer Gráfico
       </p>
     </div>
-        <h3 class="cv-section-title mt-5">Resumo Profissional</h3>
+        <h3 class="cv-section-title mt-5">RESUMO PROFISSIONAL</h3>
         <p>Desde pequeno sempre estive fazendo atividades que envolvem o computador. Trabalhar com informática, designer ou certificação digital foi apenas um reflexo do meu desejo de trabalhar na área de programação.</p>
         <p>Trabalho muito bem em equipe, ótimo desempenho acadêmico e grande disposição para o aprendizado.</p>
 
-        <h3 class="cv-section-title mt-5">Habilidades e Orientações</h3>
+        <h3 class="cv-section-title mt-5">HABILIDADES - ORIENTAÇÕES</h3>
           <ul class="cv-skills-list list-unstyled">
             <li>Conhecimento em programação</li>
             <li>Conhecimento em fotografia e edição de imagem</li>
@@ -115,7 +119,7 @@
             <li>Proatividade em acompanhar tendências do mercado</li>
           </ul>
           
-        <h3 class="cv-section-title mt-5">Histórico Profissional</h3>
+        <h3 class="cv-section-title mt-5">HISTÓRICO PROFISSIONAL</h3>
         <div class="mb-4">
           <h5>Designer Gráfico – Copiadora e Gráfica DI</h5>
           <small class="text-muted">Outubro 2024 – Atual | Taguatinga, DF</small>
@@ -172,19 +176,14 @@
   });
 </script>
 
+<!-- scripts do background -->
 <script>
-  // Espera a página carregar completamente
-  window.addEventListener('load', function() {
-    // Tempo em milissegundos que o GIF fica visível (ex: 5000 = 5 segundos)
-    const gifDuration = 3000; 
-
-    setTimeout(function() {
-      // Adiciona uma classe que remove o GIF e deixa só o fundo preto
-      document.body.classList.add('fade-out-gif');
-    }, gifDuration);
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.body.classList.add('fade-out-video');
+    }, 3000); // 3 segundos
   });
 </script>
-
 
 </body>
 </html>
