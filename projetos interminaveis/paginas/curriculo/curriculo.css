@@ -83,7 +83,7 @@
 
 /* Cor especifica para a navbar */
 .nav-pill:hover{
-    background: #c8a164cc !important;
+    background: #c8a164 !important;
 }
 
 /* Habilidades na coluna direita */
@@ -109,41 +109,22 @@
   line-height: 1;
 }
 
-body {
-  background-color: #000;
-  background-image: url('feixes.gif');
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center center;
-  background-attachment: fixed;
-  transition: background-image 1.5s ease-out;
+h1,h2,h3{
+    font-family: Georgia, 'Times New Roman', serif;
 }
 
-body::before {
-  content: "";
+/* video de fundo */
+
+#bg-video {
   position: fixed;
-  inset: 0; 
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -2; 
-  pointer-events: none;
-}
-
-/* Classe que faz o GIF sumir suavemente */
-
-body.fade-out-gif::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 1);
-  opacity: 0;
-  transition: opacity 2s ease-out;
-  z-index: -1;
-}
-
-body.fade-out-gif {
-  background-image: none !important;
-}
-
-body.fade-out-gif::before {
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
   opacity: 1;
+  transition: opacity 3s ease-out;
+}
+
+body.fade-out-video #bg-video {
+  opacity: 0;
 }
