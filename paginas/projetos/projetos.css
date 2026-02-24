@@ -10,16 +10,16 @@
 }
 
 .card-title {
-  color: #c8a164;
+  color: #4cc760;
 }
 
 .btn-outline-warning {
-  color: #c8a164;
-  border-color: #c8a164;
+  color: #4cc760;
+  border-color: #4cc760;
 }
 
 .btn-outline-warning:hover {
-  background: #c8a164;
+  background: #4cc760;
   color: #fff;
 }
 
@@ -28,4 +28,9 @@
   .card-body {
     text-align: left;
   }
+}
+
+/* Cor especifica para a navbar */
+.nav-pill:hover{
+    background: #4cc760 !important;
 }
