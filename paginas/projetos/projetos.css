@@ -1,0 +1,31 @@
+/* projetos.css - Estilos específicos para a página de projetos */
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(200, 161, 100, 0.3); /* sombra dourada no hover */
+}
+
+.card-title {
+  color: #c8a164;
+}
+
+.btn-outline-warning {
+  color: #c8a164;
+  border-color: #c8a164;
+}
+
+.btn-outline-warning:hover {
+  background: #c8a164;
+  color: #fff;
+}
+
+/* Responsivo: cards em coluna no mobile */
+@media (max-width: 768px) {
+  .card-body {
+    text-align: left;
+  }
+}
