@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* RESET GLOBAL DO SITE */
 *{
     box-sizing:border-box;
@@ -58,4 +59,66 @@ body::before {
   background: rgba(0, 0, 0, 0.55);   /* ajuste 0.4 a 0.7 conforme o vídeo */
   z-index: -1;                        /* entre o vídeo e o conteúdo */
   pointer-events: none;
+=======
+/* RESET GLOBAL DO SITE */
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:80px; /* espaço da navbar fixa */
+    background-color:#000;
+    margin:0;
+}
+
+/* Faz o layout ocupar a tela inteira */
+html, body{
+    height:100%;
+}
+
+/* Evita imagens gigantes */
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Rodapé padrão */
+footer{
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.content{
+    background: var(--light);
+    padding:40px;
+    min-height:100vh;
+    box-shadow: -10px 0 25px rgba(0,0,0,0.2);
+}
+
+/* video de fundo */
+
+#bg-video {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 1;
+  transition: opacity 3s ease-out;
+}
+
+body.fade-out-video #bg-video {
+  opacity: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);   /* ajuste 0.4 a 0.7 conforme o vídeo */
+  z-index: -1;                        /* entre o vídeo e o conteúdo */
+  pointer-events: none;
+>>>>>>> 357ceaa325e01950473259d66efa448233079110
 }

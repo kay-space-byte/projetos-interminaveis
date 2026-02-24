@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 ADOBE COLORS
 coolors.co
+=======
+ADOBE COLORS
+coolors.co
+>>>>>>> 357ceaa325e01950473259d66efa448233079110
 paletton.com

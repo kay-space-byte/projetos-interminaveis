@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DB:
 Redis ( banco de dados baseado em memoria volátil [RAM] )
 Mongo (banco de dados de collection, desestruturado) 
@@ -10,4 +11,18 @@ fetch
 GIT
 
 Back-end:
+=======
+DB:
+Redis ( banco de dados baseado em memoria volátil [RAM] )
+Mongo (banco de dados de collection, desestruturado) 
+Postgres (banco orientado)
+
+conceitos:
+Api
+async
+fetch
+GIT
+
+Back-end:
+>>>>>>> 357ceaa325e01950473259d66efa448233079110
 laravel - blade, horizon

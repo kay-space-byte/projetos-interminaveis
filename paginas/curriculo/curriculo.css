@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* curriculo.css - Estilos específicos do currículo (não conflita com globais) */
 
 .cv-container {
@@ -113,3 +114,120 @@ h1,h2,h3{
     font-family: Georgia, 'Times New Roman', serif;
 }
 
+=======
+/* curriculo.css - Estilos específicos do currículo (não conflita com globais) */
+
+.cv-container {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Sidebar */
+.cv-sidebar {
+  background: #111;
+  color: #ddd;
+}
+
+.cv-photo {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 4px solid #c8a164;
+}
+
+.cv-role {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+.cv-section-title {
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #000000;
+}
+
+/* Conteúdo principal */
+.cv-content {
+  background: #111;
+  color: #eee;
+}
+
+.cv-name-header {
+  background: linear-gradient(135deg, #c8a16422, #c8a16411);
+  border: 2px solid #c8a164;
+  box-shadow: 0 4px 15px rgba(200, 161, 100, 0.25);
+}
+
+.cv-name-header h1 {
+  color: #c8a164;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 0;
+}
+
+.cv-subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.cv-job h5 {
+  color: #c8a164;
+  margin-bottom: 0.25rem;
+}
+
+.cv-job small {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-style: italic;
+}
+
+.cv-job ul {
+  margin-left: 1.2rem;
+}
+
+/* Responsividade extra */
+@media (max-width: 991px) {
+  .cv-sidebar {
+    text-align: center;
+  }
+  .cv-name-header {
+    text-align: center;
+  }
+}
+
+/* Cor especifica para a navbar */
+.nav-pill:hover{
+    background: #c8a164 !important;
+}
+
+/* Habilidades na coluna direita */
+.cv-skills-list {
+  margin-left: 0;
+  padding-left: 1.5rem;
+}
+
+.cv-skills-list li {
+  position: relative;
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  padding-left: 1.8rem;
+  color: #000000;
+}
+
+.cv-skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+h1,h2,h3{
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+>>>>>>> 357ceaa325e01950473259d66efa448233079110

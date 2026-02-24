@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 Chat Media
 Depruner
+=======
+Chat Media
+Depruner
+>>>>>>> 357ceaa325e01950473259d66efa448233079110
 Force client settings

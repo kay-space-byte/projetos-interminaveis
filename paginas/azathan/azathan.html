@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -81,3 +82,88 @@ document.addEventListener("click", () => music.play(), {once:true});
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="favicons/favicon-96x96.png">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=MedievalSharp&display=swap" rel="stylesheet">
+
+<title>Azathan Lore</title>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero d-flex align-items-center justify-content-center text-center">
+
+    <div class="container">
+        <h1 class="titulo">SEJAM TODOS<br>BEM-VINDOS<br>A</h1>
+        <h1 class="azathan">AZATHAN!</h1>
+
+        <p class="subtitulo">
+            <span class="roxo">onde seu</span>
+            <span class="preto">futuro o aguarda</span>
+        </p>
+
+        <button class="btn btn-magic mt-4" onclick="toggleMusic()">🎵 Música</button>
+    </div>
+
+</section>
+
+<!-- CONTEÚDO -->
+<section class="container text-center py-5">
+
+    <h1>Saudações Sobreviventes de Azathan!</h1>
+    <h2 class="mb-4">É um prazer estar aqui com vocês!</h2>
+
+    <p>
+        <a class="btn btn-dark" href="pdfs/PDF Molestado.pdf" target="_blank">
+            📄 Baixar PDF de Introdução
+        </a>
+    </p>
+
+    <p>
+        <a class="btn btn-primary" href="https://discord.gg/2BzMx2Umz3" target="_blank">
+            💬 Entrar no Discord
+        </a>
+    </p>
+
+    <p class="mt-4">
+        <a href="../index.html">← Voltar para página principal</a>
+    </p>
+
+</section>
+
+<!-- AUDIO -->
+<audio id="bgmusic" loop>
+    <source src="media/ZambolinoWeirdo.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgmusic");
+
+function toggleMusic(){
+    if(music.paused){
+        music.play();
+    }else{
+        music.pause();
+    }
+}
+
+// toca ao primeiro clique na página
+document.addEventListener("click", () => music.play(), {once:true});
+</script>
+
+</body>
+</html>
+>>>>>>> 357ceaa325e01950473259d66efa448233079110

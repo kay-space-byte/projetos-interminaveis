@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* BOTÃO VERDE */
 .btn-verde {
     background: linear-gradient(135deg, #2e7d32, #66bb6a);
@@ -42,3 +43,49 @@
     transform: translateY(1px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+=======
+/* BOTÃO VERDE */
+.btn-verde {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-verde:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+    background: linear-gradient(135deg, #1b5e20, #43a047);
+}
+
+.btn-verde:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* BOTÃO ROXO */
+.btn-roxo {
+    background: linear-gradient(135deg, #6a0174, #8a05c7);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-roxo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.btn-roxo:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+>>>>>>> 357ceaa325e01950473259d66efa448233079110
