@@ -1,0 +1,33 @@
+    .about-hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('background.jpg'); /* troque pela sua imagem */
+      background-size: cover;
+      background-position: center;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .about-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .highlight {
+      color: #c8a164;
+      font-weight: bold;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background: #e2e1e1;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #c8a164, #e0c080);
+      transition: width 1.5s ease-in-out;
+    }

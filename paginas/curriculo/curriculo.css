@@ -81,11 +81,6 @@
   }
 }
 
-/* Cor especifica para a navbar */
-.nav-pill:hover{
-    background: #c8a164 !important;
-}
-
 /* Habilidades na coluna direita */
 .cv-skills-list {
   margin-left: 0;

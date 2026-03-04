@@ -29,8 +29,3 @@
     text-align: left;
   }
 }
-
-/* Cor especifica para a navbar */
-.nav-pill:hover{
-    background: #4cc760 !important;
-}

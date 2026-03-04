@@ -1,0 +1,51 @@
+.social-icon {
+  font-size: 3.5rem;          /* ícones bem maiores */
+  color: #ffffff;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* Cores originais de cada rede */
+.gmail-icon    { color: #EA4335; }          /* vermelho Gmail */
+.gmail-icon:hover { color: #DB4437; }
+
+.whatsapp-icon { color: #25D366; }          /* verde WhatsApp */
+.whatsapp-icon:hover { color: #20b358; }
+
+.linkedin-icon { color: #0A66C2; }          /* azul LinkedIn */
+.linkedin-icon:hover { color: #004182; }
+
+.github-icon   { color: #ffffff; }          /* branco no dark theme */
+.github-icon:hover { color: #e0e0e0; }
+
+.instagram-icon {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.instagram-icon:hover {
+  opacity: 0.9;
+}
+
+/* Aumenta o espaçamento entre os ícones */
+.d-flex.gap-5 {
+  gap: 5rem !important;       /* 80px de espaço entre cada ícone */
+}
+
+/* Em telas menores, reduz um pouco o espaçamento */
+@media (max-width: 992px) {
+  .d-flex.gap-5 {
+    gap: 3rem !important;
+  }
+  .social-icon {
+    font-size: 3rem;
+  }
+}
+
+h1 { color: rgb(255, 255, 255)!important;
+}

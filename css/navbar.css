@@ -20,9 +20,33 @@
     transition:0.3s;
 }
 
-.nav-pill:hover{
-    background: rgba(91,60,145,0.8);
-    transform: translateY(-2px);
+/* Estilo base do link */
+.navbar-nav .nav-link.nav-pill {
+  color: white !important;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+/* Efeito HOVER (quando passa o mouse) */
+.nav-pill:hover {
+  background: rgba(91,60,145,0.8);
+  transform: translateY(-2px);
+}
+
+/* Agora o mesmo efeito do hover para o item ATIVO (permanente na página atual) */
+.nav-pill.active {
+  background: rgba(91,60,145,0.8) !important;
+  transform: translateY(-2px) !important;
+  color: white !important;
+  /* Opcional: deixar um pouco mais destacado que o hover */
+  box-shadow: 0 4px 12px rgba(91,60,145,0.5);
+}
+
+/* Opcional: quando passa o mouse no item já ativo, pode ficar ainda mais forte */
+.nav-pill.active:hover {
+  background: rgba(91,60,145,1) !important; /* mais opaco */
+  box-shadow: 0 6px 16px rgba(91,60,145,0.6);
 }
 
 /* Links da navbar */
