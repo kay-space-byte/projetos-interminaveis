@@ -4,6 +4,37 @@
     transition: 0.4s;
 }
 
+.navbar-custom {
+  height: 80px !important;          /* altura fixa – ajuste para o que ficar bom com seu logo */
+  min-height: 80px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.navbar {
+  height: 80px !important;          /* reforço */
+}
+
+.navbar .container {
+  height: 100%;
+  display: flex;
+  align-items: center;              /* centraliza verticalmente logo e links */
+}
+
+.logo-navbar {
+  height: 48px;                     /* mantenha ou ajuste */
+  max-height: 48px;
+}
+
+/* Remove qualquer margem/padding extra que cause variação */
+.navbar-nav {
+  margin: 0 !important;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;         /* mantém consistente no mobile */
+}
+
 /* Só aplicar no desktop */
 @media (min-width: 992px){
     .navbar-collapse{

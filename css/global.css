@@ -10,6 +10,12 @@ body{
     margin:0;
 }
 
+.hero {
+  height: calc(100vh - 80px) !important;  /* hero ocupa o resto da tela abaixo da navbar */
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 /* Faz o layout ocupar a tela inteira */
 html, body{
     height:100%;
