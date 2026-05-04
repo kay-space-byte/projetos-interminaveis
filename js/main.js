@@ -185,12 +185,19 @@
   };
 
   const draw = (t) => {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+
     // fundo bem escuro com um leve “vignette”
     ctx.clearRect(0, 0, w, h);
 
     const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, Math.max(w, h) * 0.75);
-    g.addColorStop(0, "rgba(255,255,255,0.02)");
-    g.addColorStop(1, "rgba(0,0,0,0.0)");
+    if (isLight) {
+      g.addColorStop(0, "rgba(0,0,0,0.02)");
+      g.addColorStop(1, "rgba(255,255,255,0.0)");
+    } else {
+      g.addColorStop(0, "rgba(255,255,255,0.02)");
+      g.addColorStop(1, "rgba(0,0,0,0.0)");
+    }
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, w, h);
 
@@ -208,9 +215,15 @@
       const y2 = Math.sin(s.a) * (s.r + s.len);
 
       const lg = ctx.createLinearGradient(x1, y1, x2, y2);
-      lg.addColorStop(0, `rgba(255,255,255,0)`);
-      lg.addColorStop(0.35, `rgba(255,255,255,${alpha})`);
-      lg.addColorStop(1, `rgba(255,255,255,0)`);
+      if (isLight) {
+        lg.addColorStop(0, `rgba(0,0,0,0)`);
+        lg.addColorStop(0.35, `rgba(0,0,0,${alpha})`);
+        lg.addColorStop(1, `rgba(0,0,0,0)`);
+      } else {
+        lg.addColorStop(0, `rgba(255,255,255,0)`);
+        lg.addColorStop(0.35, `rgba(255,255,255,${alpha})`);
+        lg.addColorStop(1, `rgba(255,255,255,0)`);
+      }
 
       ctx.strokeStyle = lg;
       ctx.lineWidth = s.w;
@@ -223,7 +236,7 @@
     // núcleo brilhando
     ctx.beginPath();
     ctx.arc(0, 0, 22, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255,255,255,0.04)";
+    ctx.fillStyle = isLight ? "rgba(0,0,0,0.04)" : "rgba(255,255,255,0.04)";
     ctx.fill();
     ctx.restore();
   };

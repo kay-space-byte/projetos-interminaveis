@@ -51,7 +51,7 @@
 .linkedin-icon { color: #0A66C2; }          /* azul LinkedIn */
 .linkedin-icon:hover { color: #004182; }
 
-.github-icon   { color: #ffffff; }          /* branco no dark theme */
+.github-icon   { color: var(--text); }          /* branco no dark theme */
 .github-icon:hover { color: #e0e0e0; }
 
 .instagram-icon {
