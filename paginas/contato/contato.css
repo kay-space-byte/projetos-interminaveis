@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #fff;
+  color: var(--text);
   padding: 2rem 0;
 }
 
@@ -18,20 +18,20 @@
   gap: 0.5rem;
   padding: 1.25rem 1rem;
   border-radius: var(--radius-lg);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
   backdrop-filter: blur(10px);
   transition: transform 150ms ease, background 150ms ease;
 }
 
 .contact-grid a:hover{
   transform: translateY(-2px);
-  background: rgba(255,255,255,0.08);
+  background: var(--panel-hover);
 }
 
 .social-icon {
   font-size: 3.5rem;          /* ícones bem maiores */
-  color: #ffffff;
+  color: var(--text);
   transition: all 0.3s ease;
   margin-bottom: 0.5rem;
 }
@@ -78,5 +78,5 @@
   }
 }
 
-h1 { color: rgb(255, 255, 255)!important;
+h1 { color: var(--text) !important;
 }

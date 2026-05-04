@@ -27,6 +27,13 @@
   --shadow-2: 0 18px 60px rgba(0,0,0,0.45);
 
   --ring: 0 0 0 4px rgba(111, 75, 216, 0.22);
+
+  --ghost-bg: rgba(255,255,255,0.08);
+  --ghost-border: rgba(255,255,255,0.16);
+  --ghost-text: rgba(255,255,255,0.92);
+  --ghost-hover: rgba(255,255,255,0.14);
+  --panel-border: rgba(255,255,255,0.10);
+  --panel-hover: rgba(255,255,255,0.14);
 }
 
 :root[data-theme="light"]{
@@ -40,17 +47,35 @@
   --shadow-1: 0 10px 30px rgba(0,0,0,0.15);
   --shadow-2: 0 18px 60px rgba(0,0,0,0.25);
   --ring: 0 0 0 4px rgba(111, 75, 216, 0.15);
+
+  --ghost-bg: rgba(0, 0, 0, 0.06);
+  --ghost-border: rgba(0, 0, 0, 0.12);
+  --ghost-text: rgba(0, 0, 0, 0.92);
+  --ghost-hover: rgba(0, 0, 0, 0.10);
+
+  --panel-border: rgba(0,0,0,0.10);
+  --panel-hover: rgba(0,0,0,0.08);
 }
 
 :root[data-theme="light"] .navbar-custom{
-  background: rgba(248, 249, 250, 0.9);
+  background: rgba(248, 249, 250, 0.95);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="light"] .navbar-custom .nav-link,
+:root[data-theme="light"] .navbar-custom .navbar-brand,
+:root[data-theme="light"] .navbar-custom .navbar-toggler,
+:root[data-theme="light"] .navbar-custom #theme-toggle{
+  color: rgba(0, 0, 0, 0.92) !important;
+}
+
+:root[data-theme="light"] .navbar-custom .navbar-toggler-icon{
+  filter: invert(1);
 }
 
 :root[data-theme="light"] #theme-toggle{
   color: var(--text) !important;
 }
-
 .fade-in{
   opacity: 0;
   transform: translateY(20px);

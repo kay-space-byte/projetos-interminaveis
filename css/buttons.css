@@ -32,12 +32,12 @@
 }
 
 .btn-ghost{
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.16);
-  color: rgba(255,255,255,0.92);
+  background: var(--ghost-bg);
+  border: 1px solid var(--ghost-border);
+  color: var(--ghost-text);
   backdrop-filter: blur(10px);
 }
 .btn-ghost:hover{
-  background: rgba(255,255,255,0.10);
+  background: var(--ghost-hover);
   transform: translateY(-1px);
 }
