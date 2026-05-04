@@ -1,44 +1,43 @@
-/* BOTÃO VERDE */
-.btn-verde {
-    background: linear-gradient(135deg, #2e7d32, #66bb6a);
-    border: none;
-    border-radius: 30px;
-    padding: 12px 28px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    transition: all 0.3s ease;
+/* Botões do site (compatíveis com Bootstrap) */
+.btn{
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
-.btn-verde:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
-    background: linear-gradient(135deg, #1b5e20, #43a047);
+.btn:focus{
+  box-shadow: var(--ring) !important;
 }
 
-.btn-verde:active {
-    transform: translateY(1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+.btn-verde{
+  background: linear-gradient(135deg, rgba(76, 199, 96, 1), rgba(76, 199, 96, 0.70));
+  border: 1px solid rgba(76, 199, 96, 0.45);
+  color: #061109;
+  box-shadow: 0 14px 40px rgba(76, 199, 96, 0.18);
+}
+.btn-verde:hover{
+  transform: translateY(-1px);
+  filter: saturate(1.05);
 }
 
-/* BOTÃO ROXO */
-.btn-roxo {
-    background: linear-gradient(135deg, #6a0174, #8a05c7);
-    border: none;
-    border-radius: 30px;
-    padding: 12px 28px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    transition: all 0.3s ease;
+.btn-roxo{
+  background: linear-gradient(135deg, rgba(111, 75, 216, 1), rgba(111, 75, 216, 0.70));
+  border: 1px solid rgba(111, 75, 216, 0.45);
+  color: #fff;
+  box-shadow: 0 14px 40px rgba(111, 75, 216, 0.20);
+}
+.btn-roxo:hover{
+  transform: translateY(-1px);
+  filter: saturate(1.05);
 }
 
-.btn-roxo:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+.btn-ghost{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.16);
+  color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
 }
-
-.btn-roxo:active {
-    transform: translateY(1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+.btn-ghost:hover{
+  background: rgba(255,255,255,0.10);
+  transform: translateY(-1px);
 }

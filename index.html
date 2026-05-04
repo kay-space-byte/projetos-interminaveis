@@ -22,13 +22,14 @@
 
 
 <body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
   <div class="container">
 
     <!-- Nome / Logo -->
 <a class="navbar-brand" href="index.html">
-    <img src="imagens/planetanumero.gif" alt="Logo" class="logo-navbar">
+    <canvas class="logo-planet-canvas" width="48" height="48" aria-label="Logo do site (planeta)"></canvas>
 </a>
 
     <!-- Botão hamburguer -->
@@ -51,30 +52,39 @@
 </nav>
 
 <main id="conteudo-principal">
-<!-- HERO -->
-<section class="hero d-flex align-items-center text-center" aria-label="Apresentação">
-  
-  <div class="overlay"></div>
+  <section class="home-hero" aria-label="Apresentação">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-kicker">
+            <span style="color: var(--accent); font-weight: 700;">Disponível</span>
+            <span>para aprender, construir e evoluir</span>
+          </div>
 
-  <video id="bg-video" autoplay muted loop playsinline class="hero-video">
-    <source src="backgrounds/background.mp4" type="video/mp4">
-  </video>
-  
-    <div class="container position-relative hero-inner">
+          <h1>Gustavo Reis Ferreira</h1>
+          <p class="hero-role">
+            Oi, me chamo Gustavo. Sou <strong>desenvolvedor em formação</strong> com base forte em web e design — e estou transformando ideias em páginas bonitas, rápidas e claras.
+          </p>
 
-        <img src="imagens/Banana Spinning Sticker by Tom Windeknecht.gif"
-             class="profile-img-hero mb-4" alt="Ilustração de perfil">
-
-        <h1 class="hero-title">Oi, me chamo Gustavo Reis</h1>
-        <p class="hero-subtitle">Futuro desenvolvedor Full-Stack</p>
-        <p class="hero-lead">Criando experiências na web com curiosidade e propósito.</p>
-
-        <div class="hero-actions d-flex flex-wrap justify-content-center gap-3 mt-4">
-          <a class="btn btn-roxo text-white" href="paginas/projetos/projetos.html">Ver projetos</a>
-          <a class="btn btn-outline-light hero-btn-outline" href="paginas/contato/contato.html">Falar comigo</a>
+          <div class="hero-actions">
+            <a class="btn btn-roxo" href="paginas/projetos/projetos.html">Ver projetos</a>
+            <a class="btn btn-ghost" href="paginas/contato/contato.html">Falar comigo</a>
+            <a class="btn btn-verde" href="paginas/curriculo/curriculo.html">Abrir currículo</a>
+          </div>
         </div>
-  </div>
-</section>
+
+        <aside class="panel hero-card" aria-label="Resumo rápido">
+          <div class="avatar">
+            <canvas class="planet-canvas" width="140" height="140" data-size="140" aria-label="Avatar (planeta)"></canvas>
+          </div>
+          <p class="hero-meta">
+            <strong style="color: rgba(255,255,255,0.94);">Futuro Full‑Stack</strong><br>
+            Brasília‑DF • Portfólio 2026
+          </p>
+        </aside>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="site-footer">

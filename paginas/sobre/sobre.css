@@ -1,47 +1,50 @@
-.page-sobre .about-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.72), rgba(5, 5, 8, 0.92)), url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 52vh;
-  display: flex;
-  align-items: center;
-  color: #fff;
+.page-sobre .about-hero{
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
 }
 
-.page-sobre .about-section {
-  padding: clamp(3rem, 8vw, 5rem) 0;
-  background: #faf9f7;
-  color: #1a1a1a;
+.page-sobre .about-hero .panel{
+  padding: clamp(1.25rem, 3vw, 2rem);
 }
 
-.page-sobre .section-heading {
-  color: var(--color-accent);
+.page-sobre .highlight{
+  color: var(--brand);
   font-weight: 700;
-  font-size: 1.5rem;
 }
 
-.page-sobre .highlight {
-  color: var(--color-accent);
-  font-weight: 600;
+.page-sobre .skills{
+  display: grid;
+  gap: 0.9rem;
 }
 
-.page-sobre .skill-bar {
-  height: 8px;
-  background: #e8e6e3;
-  border-radius: 4px;
-  margin-bottom: 15px;
+.page-sobre .skill{
+  display: grid;
+  gap: 0.45rem;
+}
+
+.page-sobre .skill .label{
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.page-sobre .skill .bar{
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.10);
   overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
 }
 
-.page-sobre .skill-fill {
+.page-sobre .skill .fill{
   height: 100%;
-  background: linear-gradient(90deg, var(--color-accent), #e0c080);
-  transition: width 1.5s ease-in-out;
+  width: var(--pct);
+  background: linear-gradient(90deg, rgba(111,75,216,0.95), rgba(76,199,96,0.90));
 }
 
-.page-sobre .about-section .blockquote {
-  color: #5c5c5c;
-  font-style: italic;
-  border-left: 4px solid var(--color-accent);
-  padding-left: 1.25rem;
+.page-sobre .quote{
+  margin: 0;
+  color: var(--muted);
+  border-left: 3px solid rgba(200,161,100,0.7);
+  padding-left: 1rem;
 }

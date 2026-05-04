@@ -1,13 +1,33 @@
-Projeto de portifólio pessoal
+# Portfólio — Gustavo Reis Ferreira
 
-Objetivo
+Portfólio pessoal feito em **HTML/CSS/JS** (estático), pensado para ser publicado no **GitHub Pages**.
 
-Subir um site pra internet para colocar meus projetos e estudos pessoais.
+## Páginas
 
-Lista de tarefas atuais
+- **Home**: `index.html`
+- **Sobre**: `paginas/sobre/sobre.html`
+- **Projetos**: `paginas/projetos/projetos.html`
+- **Currículo**: `paginas/curriculo/curriculo.html`
+- **Contato**: `paginas/contato/contato.html`
 
-- Implementar paginas prontas com a navbar
-- Unificar todos os CSS
-- Deixar o site mais leve comprimindo as midias
-- retirar qualquer midia que contenha copyright
-- criar banco de dados
+## Como publicar no GitHub Pages
+
+1. No GitHub, vá em **Settings → Pages**
+2. Em **Build and deployment**
+   - **Source**: Deploy from a branch
+   - **Branch**: `main` (ou a branch que você usa) e a pasta `/root`
+3. Aguarde o deploy e abra a URL do Pages.
+
+## Personalização rápida (meus dados)
+
+- **Foto do currículo**
+  - Substitua o arquivo `paginas/curriculo/sua-foto.jpg` pela sua foto (mantendo o mesmo nome).
+- **Contato**
+  - Edite `paginas/contato/contato.html` e troque os placeholders:
+    - `SEU-LINKEDIN`
+    - `SEU-USER` (Instagram)
+
+## Performance
+
+- O site evita mídia pesada no fundo: em vez de vídeo, usa **animações leves em `canvas`** (logo/planeta e “feixes” no fundo).
+- Se o usuário tiver **redução de movimento** ativada, as animações ficam estáticas.

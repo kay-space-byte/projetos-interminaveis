@@ -25,18 +25,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
-
-  <!-- Vídeo de fundo -->
-  <video id="bg-video" autoplay muted loop playsinline>
-  <source src="../../backgrounds/feixes.mp4" type="video/mp4">
-</video>
+<body class="has-canvas-bg">
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand" href="../../index.html">
-      <img src="../../imagens/planetanumero.gif" alt="Logo" class="logo-navbar">
+      <canvas class="logo-planet-canvas" width="48" height="48" aria-label="Logo do site (planeta)"></canvas>
     </a>
 
     <!-- Hamburguer -->
@@ -68,52 +64,51 @@
 </nav>
 
   <main id="conteudo-principal">
-  <!-- Seção de Projetos -->
-  <section class="py-5 projects-section text-white">
-    <div class="container">
-      <h2 class="text-center mb-2 projects-page-title">Meus Projetos</h2>
-      <p class="text-center text-white-50 mb-5 projects-page-lead">Campanhas de RPG, estudos e experimentos publicados na web.</p>
-      <div class="row g-4">
-
-        <!-- Card Sablewood -->
-        <div class="col-md-4">
-          <div class="card bg-secondary h-100 border-0 shadow-lg">
-            <div class="card-body text-center">
-              <i class="bi bi-dice-6-fill display-3 mb-3" style="color: #4cc760;"></i> <!-- Ícone RPG genérico -->
-              <h5 class="card-title">Campanha Sablewood</h5>
-              <p class="card-text">Minha campanha de RPG com fichas de personagens, experiências e estilos customizados.</p>
-              <a href="https://kay-space-byte.github.io/Gaia-RPG/index.html" class="btn btn-outline-warning">Ver Campanha</a>
+    <section class="projects-hero section">
+      <div class="container">
+        <div class="panel p-4 p-lg-5">
+          <div class="d-flex flex-column flex-lg-row align-items-lg-end justify-content-between gap-3">
+            <div>
+              <h1 class="section-title">Projetos</h1>
+              <p class="section-lead">Campanhas de RPG, estudos e experimentos publicados na web.</p>
+            </div>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-ghost" href="../sobre/sobre.html">Sobre</a>
+              <a class="btn btn-roxo" href="../contato/contato.html">Contato</a>
             </div>
           </div>
         </div>
 
-        <!-- Card Azathan -->
-        <div class="col-md-4">
-          <div class="card bg-secondary h-100 border-0 shadow-lg">
-            <div class="card-body text-center">
-              <i class="bi bi-magic display-3 mb-3" style="color: #4cc760;"></i> <!-- Ícone mágico para RPG -->
-              <h5 class="card-title">Campanha Azathan</h5>
-              <p class="card-text">Outra campanha de RPG com estilos e conteúdos personalizados.</p>
-              <a href="https://kay-space-byte.github.io/Azathan-RPG/index.html" class="btn btn-outline-warning">Ver Campanha</a>
+        <div class="row g-4 mt-2 mt-lg-3">
+          <div class="col-md-6 col-lg-4">
+            <div class="panel project-card">
+              <div class="icon"><i class="bi bi-dice-6-fill"></i></div>
+              <h3>Campanha Sablewood</h3>
+              <p>Minha campanha de RPG com fichas de personagens, experiências e estilos customizados.</p>
+              <a href="https://kay-space-byte.github.io/Gaia-RPG/index.html" class="btn btn-verde">Ver campanha</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="panel project-card">
+              <div class="icon"><i class="bi bi-magic"></i></div>
+              <h3>Campanha Azathan</h3>
+              <p>Outra campanha de RPG com estilos e conteúdos personalizados.</p>
+              <a href="https://kay-space-byte.github.io/Azathan-RPG/index.html" class="btn btn-verde">Ver campanha</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="panel project-card">
+              <div class="icon"><i class="bi bi-book-half"></i></div>
+              <h3>Estudos e Anotações</h3>
+              <p>Página com notas importantes sobre HTML, CSS, JS e outros aprendizados.</p>
+              <a href="https://kay-space-byte.github.io/Estudos/index.html" class="btn btn-verde">Ver estudos</a>
             </div>
           </div>
         </div>
-
-        <!-- Card Estudos -->
-        <div class="col-md-4">
-          <div class="card bg-secondary h-100 border-0 shadow-lg">
-            <div class="card-body text-center">
-              <i class="bi bi-book-half display-3 mb-3" style="color: #4cc760;"></i> <!-- Ícone de livro para estudos -->
-              <h5 class="card-title">Estudos e Anotações</h5>
-              <p class="card-text">Página com notas importantes sobre HTML, CSS, JS e outros aprendizados.</p>
-              <a href="https://kay-space-byte.github.io/Estudos/index.html" class="btn btn-outline-warning">Ver Estudos</a>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer class="site-footer">

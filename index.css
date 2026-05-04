@@ -1,72 +1,91 @@
-/* HERO FULLSCREEN COM IMAGEM */
-.hero {
-  min-height: calc(100vh - var(--navbar-height, 80px));
-  background: transparent !important;
-  position: relative;
+/* Home */
+.home-hero{
+  min-height: calc(100vh - var(--nav-height));
+  display: grid;
+  place-items: center;
+  padding: clamp(2.5rem, 6vw, 4.5rem) 0;
 }
 
-.hero-inner {
-  padding-bottom: 2rem;
+.home-hero .hero-grid{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0);
-  z-index: -1;
+.home-hero .hero-kicker{
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 
-/* Foto circular */
-.profile-img-hero{
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.9);
-    object-fit: cover;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+.home-hero h1{
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 1rem 0 0.65rem;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
 }
 
-/* Textos da hero */
-.hero-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.75);
+.home-hero .hero-role{
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 1.06rem;
+  max-width: 58ch;
 }
 
-.hero-subtitle {
-    font-size: clamp(1.15rem, 2.5vw, 1.4rem);
-    font-weight: 500;
-    color: var(--color-accent);
-    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+.home-hero .hero-role strong{
+  color: rgba(255,255,255,0.95);
 }
 
-.hero-lead {
-    max-width: 28rem;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.88);
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+.home-hero .hero-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
 }
 
-.hero .hero-actions .btn {
-    min-width: 10rem;
-    padding: 0.65rem 1.35rem;
-    border-radius: 999px;
-    font-weight: 600;
+.hero-card{
+  padding: 1.25rem;
 }
 
-.hero-btn-outline {
-    border-width: 2px;
-    backdrop-filter: blur(8px);
-    background: rgba(255, 255, 255, 0.08) !important;
+.hero-card .avatar{
+  width: 168px;
+  height: 168px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.05);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1rem;
+  box-shadow: var(--shadow-1);
 }
 
-.hero-btn-outline:hover {
-    background: rgba(255, 255, 255, 0.18) !important;
-    color: #fff !important;
+.hero-card .avatar img{
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  object-fit: cover;
 }
 
-.hero h1,
-.hero p {
-    color: #fff;
+.hero-card .hero-meta{
+  text-align: center;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 991.98px){
+  .home-hero .hero-grid{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .home-hero .hero-actions{
+    justify-content: center;
+  }
 }
