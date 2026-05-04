@@ -247,3 +247,53 @@
   raf = requestAnimationFrame(loop);
   window.addEventListener("beforeunload", () => cancelAnimationFrame(raf));
 })();
+
+(() => {
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+
+  const icon = toggle.querySelector("i");
+
+  const applyTheme = (theme) => {
+    document.documentElement.setAttribute("data-theme", theme);
+    icon.className = theme === "light" ? "bi bi-sun" : "bi bi-moon";
+    localStorage.setItem("theme", theme);
+  };
+
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  applyTheme(savedTheme);
+
+  toggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme") || "dark";
+    const newTheme = current === "dark" ? "light" : "dark";
+    applyTheme(newTheme);
+  });
+})();
+
+(() => {
+  const elements = document.querySelectorAll(".fade-in");
+  if (elements.length === 0) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+})();
+
+(() => {
+  const btn = document.getElementById("back-to-top");
+  if (!btn) return;
+
+  window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+})();
