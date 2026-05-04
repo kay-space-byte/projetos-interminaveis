@@ -325,3 +325,10 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 })();
+
+(() => {
+  const canvas = document.getElementById("bg-canvas");
+  if (!canvas) return;
+
+  canvas.classList.add("canvas-fade-out");
+})();

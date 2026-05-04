@@ -200,6 +200,20 @@ body.has-video::before{
   z-index: -2;
 }
 
+#bg-canvas.canvas-fade-out {
+  animation: fadeOutCanvas 2s ease-in-out forwards;
+  animation-delay: 10s;
+}
+
+@keyframes fadeOutCanvas {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 body.has-canvas-bg::before{
   content: "";
   position: fixed;
