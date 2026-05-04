@@ -48,19 +48,22 @@
   const drawPlanet = (ctx, size, t) => {
     ctx.clearRect(0, 0, size, size);
 
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
     const cx = size / 2;
     const cy = size / 2;
     const r = size * 0.22;
 
-    // preto e branco (em fundo escuro: branco predominante)
-    const stroke = "rgba(255,255,255,0.92)";
-    const soft = "rgba(255,255,255,0.14)";
+    const stroke = isLight ? "rgba(0,0,0,0.92)" : "rgba(255,255,255,0.92)";
+    const soft = isLight ? "rgba(0,0,0,0.14)" : "rgba(255,255,255,0.14)";
+    const glow = isLight ? "rgba(0,0,0,0.08)" : "rgba(255,255,255,0.06)";
+    const ringStroke = isLight ? "rgba(0,0,0,0.75)" : "rgba(255,255,255,0.75)";
+    const cutout = isLight ? "rgba(255,255,255,1)" : "rgba(0,0,0,1)";
     const fill = "rgba(0,0,0,0)";
 
     // brilho suave atrás
     ctx.beginPath();
     ctx.arc(cx, cy, r * 1.95, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255,255,255,0.06)";
+    ctx.fillStyle = glow;
     ctx.fill();
 
     // planeta
@@ -90,7 +93,7 @@
 
     ctx.beginPath();
     ctx.ellipse(0, 0, rx, ry, 0, 0, Math.PI * 2);
-    ctx.strokeStyle = "rgba(255,255,255,0.75)";
+    ctx.strokeStyle = ringStroke;
     ctx.lineWidth = 2;
     ctx.stroke();
 
@@ -98,7 +101,7 @@
     ctx.globalCompositeOperation = "destination-out";
     ctx.beginPath();
     ctx.arc(0, 0, r * 1.05, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(0,0,0,1)";
+    ctx.fillStyle = cutout;
     ctx.fill();
 
     ctx.globalCompositeOperation = "source-over";
