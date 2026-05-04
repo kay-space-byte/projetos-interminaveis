@@ -5,14 +5,14 @@
 }
 
 .navbar-custom {
-  height: 80px !important;          /* altura fixa – ajuste para o que ficar bom com seu logo */
-  min-height: 80px !important;
+  height: var(--navbar-height, 80px) !important;
+  min-height: var(--navbar-height, 80px) !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
 .navbar {
-  height: 80px !important;          /* reforço */
+  height: var(--navbar-height, 80px) !important;
 }
 
 .navbar .container {
@@ -61,23 +61,20 @@
 
 /* Efeito HOVER (quando passa o mouse) */
 .nav-pill:hover {
-  background: rgba(91,60,145,0.8);
+  background: var(--color-nav-active);
   transform: translateY(-2px);
 }
 
-/* Agora o mesmo efeito do hover para o item ATIVO (permanente na página atual) */
 .nav-pill.active {
-  background: rgba(91,60,145,0.8) !important;
+  background: var(--color-nav-active) !important;
   transform: translateY(-2px) !important;
   color: white !important;
-  /* Opcional: deixar um pouco mais destacado que o hover */
-  box-shadow: 0 4px 12px rgba(91,60,145,0.5);
+  box-shadow: 0 4px 12px rgba(91, 60, 145, 0.5);
 }
 
-/* Opcional: quando passa o mouse no item já ativo, pode ficar ainda mais forte */
 .nav-pill.active:hover {
-  background: rgba(91,60,145,1) !important; /* mais opaco */
-  box-shadow: 0 6px 16px rgba(91,60,145,0.6);
+  background: rgba(91, 60, 145, 1) !important;
+  box-shadow: 0 6px 16px rgba(91, 60, 145, 0.6);
 }
 
 /* Links da navbar */

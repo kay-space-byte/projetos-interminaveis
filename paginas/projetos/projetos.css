@@ -1,26 +1,52 @@
 /* projetos.css - Estilos específicos para a página de projetos */
 
+.projects-section {
+  background: linear-gradient(180deg, var(--color-bg) 0%, #0a0d12 100%);
+  padding-top: 4.5rem !important;
+  padding-bottom: 4.5rem !important;
+}
+
+.projects-page-title {
+  color: var(--color-accent-2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.projects-page-lead {
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(200, 161, 100, 0.3); /* sombra dourada no hover */
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card);
 }
 
 .card-title {
-  color: #4cc760;
+  color: var(--color-accent-2);
+  font-weight: 600;
 }
 
 .btn-outline-warning {
-  color: #4cc760;
-  border-color: #4cc760;
+  color: var(--color-accent-2);
+  border-color: var(--color-accent-2);
+  border-radius: 999px;
+  font-weight: 600;
 }
 
 .btn-outline-warning:hover {
-  background: #4cc760;
+  background: var(--color-accent-2);
   color: #fff;
+  border-color: var(--color-accent-2);
 }
 
 /* Responsivo: cards em coluna no mobile */

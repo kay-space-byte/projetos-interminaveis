@@ -1,17 +1,40 @@
+/* Design tokens — paleta e tipografia unificadas */
+:root {
+  --font-sans: "Roboto", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --navbar-height: 80px;
+  --color-bg: #050508;
+  --color-bg-elevated: #0f0f14;
+  --color-text: #f2f2f5;
+  --color-text-muted: rgba(255, 255, 255, 0.72);
+  --color-accent: #c8a164;
+  --color-accent-2: #4cc760;
+  --color-nav-active: rgba(91, 60, 145, 0.85);
+  --overlay-scrim: rgba(0, 0, 0, 0.55);
+  --radius-md: 12px;
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
 /* RESET GLOBAL DO SITE */
 *{
     box-sizing:border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top:80px; /* espaço da navbar fixa */
-    background-color:#000;
+    font-family: var(--font-sans);
+    padding-top: var(--navbar-height);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     margin:0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
 .hero {
-  height: calc(100vh - 80px) !important;  /* hero ocupa o resto da tela abaixo da navbar */
+  height: calc(100vh - var(--navbar-height)) !important;
   margin-top: 0 !important;
   padding-top: 0 !important;
 }
@@ -27,18 +50,18 @@ img{
     height:auto;
 }
 
-/* Rodapé padrão */
-footer{
-    color:white;
-    padding:20px;
-    text-align:center;
+footer:not(.site-footer) {
+  color: var(--color-text-muted);
+  padding: 1.25rem;
+  text-align: center;
 }
 
 .content{
-    background: var(--light);
-    padding:40px;
-    min-height:100vh;
-    box-shadow: -10px 0 25px rgba(0,0,0,0.2);
+    background: #ffffff;
+    padding: 40px;
+    min-height: calc(100vh - var(--navbar-height));
+    box-shadow: -10px 0 25px rgba(0, 0, 0, 0.12);
+    border-radius: var(--radius-md);
 }
 
 /* video de fundo */
@@ -61,7 +84,18 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);   /* ajuste 0.4 a 0.7 conforme o vídeo */
-  z-index: -1;                        /* entre o vídeo e o conteúdo */
+  background: var(--overlay-scrim);
+  z-index: -1;
   pointer-events: none;
+}
+
+/* Rodapé unificado */
+.site-footer {
+  color: var(--color-text-muted);
+  padding: 1.5rem 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
 }

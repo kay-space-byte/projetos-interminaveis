@@ -1,36 +1,72 @@
 /* HERO FULLSCREEN COM IMAGEM */
 .hero {
-  height: 100vh;
-  background: transparent !important;  /* remove qualquer background */
+  min-height: calc(100vh - var(--navbar-height, 80px));
+  background: transparent !important;
   position: relative;
 }
 
+.hero-inner {
+  padding-bottom: 2rem;
+}
+
 .overlay {
-  background: rgba(0, 0, 0, 0);  /* reduza opacidade para ver o vídeo */
-  z-index: -1;                     /* atrás do conteúdo da hero */
+  background: rgba(0, 0, 0, 0);
+  z-index: -1;
 }
 
 /* Foto circular */
 .profile-img-hero{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    border:4px solid white;
-    object-fit:cover;
-    box-shadow:0 0 25px rgba(0,0,0,0.6);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.9);
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 
 /* Textos da hero */
-.hero-title{
-    font-size:3rem;
-    font-weight:700;
+.hero-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.75);
 }
 
-.hero-subtitle{
-    font-size:1.4rem;
-    opacity:0.9;
+.hero-subtitle {
+    font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+    font-weight: 500;
+    color: var(--color-accent);
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
 }
 
-h1,p{
-    color: white;
+.hero-lead {
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero .hero-actions .btn {
+    min-width: 10rem;
+    padding: 0.65rem 1.35rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.hero-btn-outline {
+    border-width: 2px;
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.hero-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+    color: #fff !important;
+}
+
+.hero h1,
+.hero p {
+    color: #fff;
 }

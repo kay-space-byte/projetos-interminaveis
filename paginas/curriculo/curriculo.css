@@ -1,5 +1,9 @@
 /* curriculo.css - Estilos específicos do currículo (não conflita com globais) */
 
+.cv-page-wrap {
+  padding-bottom: 2rem;
+}
+
 .cv-container {
   font-family: 'Roboto', Arial, sans-serif;
 }
