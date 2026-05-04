@@ -1,5 +1,6 @@
 /* Navbar — mais profissional e consistente */
 .navbar-custom{
+  /* No desktop pode ser “fixa”. No mobile o menu precisa crescer (altura auto). */
   height: var(--nav-height);
   min-height: var(--nav-height);
   padding: 0 !important;
@@ -80,6 +81,16 @@
 
 /* No mobile, o menu aberto vira um painel */
 @media (max-width: 991.98px){
+  .navbar-custom{
+    height: auto;
+    padding: 0.25rem 0 !important;
+  }
+
+  .navbar .container{
+    min-height: var(--nav-height);
+    align-items: flex-start;
+  }
+
   .navbar-collapse{
     margin-top: 0.5rem;
     background: rgba(7, 7, 12, 0.78);
@@ -88,6 +99,7 @@
     backdrop-filter: blur(12px);
     padding: 0.75rem;
     border-radius: var(--radius-lg);
+    width: 100%;
   }
 
   .navbar-nav{
