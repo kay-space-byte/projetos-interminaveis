@@ -258,6 +258,18 @@
     document.documentElement.setAttribute("data-theme", theme);
     icon.className = theme === "light" ? "bi bi-sun" : "bi bi-moon";
     localStorage.setItem("theme", theme);
+
+    // Update navbar class
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      if (theme === 'light') {
+        navbar.classList.remove('navbar-dark');
+        navbar.classList.add('navbar-light');
+      } else {
+        navbar.classList.remove('navbar-light');
+        navbar.classList.add('navbar-dark');
+      }
+    }
   };
 
   const savedTheme = localStorage.getItem("theme") || "dark";
