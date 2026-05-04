@@ -10,20 +10,12 @@ Portfólio pessoal feito em **HTML/CSS/JS** (estático), pensado para ser public
 - **Currículo**: `paginas/curriculo/curriculo.html`
 - **Contato**: `paginas/contato/contato.html`
 
-## Como publicar no GitHub Pages
-
-1. No GitHub, vá em **Settings → Pages**
-2. Em **Build and deployment**
-   - **Source**: Deploy from a branch
-   - **Branch**: `main` (ou a branch que você usa) e a pasta `/root`
-3. Aguarde o deploy e abra a URL do Pages.
-
 ## Personalização rápida (meus dados)
 
 - **Foto do currículo**
-  - Substitua o arquivo `paginas/curriculo/sua-foto.jpg` pela sua foto (mantendo o mesmo nome).
+  - Substituir o arquivo `paginas/curriculo/sua-foto.jpg` pela minha foto.
 - **Contato**
-  - Edite `paginas/contato/contato.html` e troque os placeholders:
+  - Editar `paginas/contato/contato.html` e trocar os placeholders:
     - `SEU-LINKEDIN`
     - `SEU-USER` (Instagram)
 
