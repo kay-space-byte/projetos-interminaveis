@@ -69,3 +69,8 @@
 .cv-list li{
   margin-bottom: 0.5rem;
 }
+
+.cv-strong{
+  color: var(--text);
+  font-weight: bold;
+}
