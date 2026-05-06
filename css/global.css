@@ -44,8 +44,8 @@
   --muted: rgba(0, 0, 0, 0.72);
   --muted-2: rgba(0, 0, 0, 0.56);
 
-  --shadow-1: 0 10px 30px rgba(0,0,0,0.15);
-  --shadow-2: 0 18px 60px rgba(0,0,0,0.25);
+  --shadow-1: 0 10px 30px rgba(0,0,0,0.35);
+  --shadow-2: 0 18px 60px rgba(0,0,0,0.45);
   --ring: 0 0 0 4px rgba(111, 75, 216, 0.15);
 
   --ghost-bg: rgba(0, 0, 0, 0.06);
@@ -60,6 +60,7 @@
 :root[data-theme="light"] .navbar-custom{
   background: rgba(248, 249, 250, 0.95);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-1);
 }
 
 :root[data-theme="light"] .navbar-custom .nav-link,

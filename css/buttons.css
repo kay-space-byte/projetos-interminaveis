@@ -36,6 +36,7 @@
   border: 1px solid var(--ghost-border);
   color: var(--ghost-text);
   backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-1);
 }
 .btn-ghost:hover{
   background: var(--ghost-hover);
