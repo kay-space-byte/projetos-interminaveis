@@ -37,9 +37,9 @@
 }
 
 :root[data-theme="light"]{
-  --bg: #f8f9fa;
-  --panel: rgba(0, 0, 0, 0.06);
-  --panel-strong: rgba(0, 0, 0, 0.10);
+  --bg: #e9ecef;
+  --panel: rgba(0, 0, 0, 0.08);
+  --panel-strong: rgba(0, 0, 0, 0.12);
   --text: rgba(0, 0, 0, 0.92);
   --muted: rgba(0, 0, 0, 0.72);
   --muted-2: rgba(0, 0, 0, 0.56);
